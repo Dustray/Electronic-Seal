@@ -59,10 +59,13 @@ namespace Electronic_Seal
             g.DrawString(text, font, brush, bitmapWidth/2, actualPositionY,format);
 
         }
-        public void DrawImpurity()
+        public void DrawImpurity(bool isSlide)
         {
-            someDot(bitmap, 2000, 2,Color.White);
-            someDot(bitmap, 700, 3, Color.White);
+            if (isSlide)
+            {
+                someDot(bitmap, 2000, 2, Color.White);
+                someDot(bitmap, 700, 3, Color.White);
+            }
         }
         private void someDot(Bitmap bit ,int count,int size,Color color)
         {
@@ -82,6 +85,20 @@ namespace Electronic_Seal
                 r.Y = ranPositionY;
                 Brush brush = new SolidBrush(color);
                 g.FillEllipse(brush, r);
+            }
+        }
+
+        public void changePixcl()
+        {
+            for(int i = 0; i < bitmapWidth; i++)
+            {
+                for(int j = 0; j < bitmapHeight; j++)
+                {
+                    Color c = bitmap.GetPixel(i, j);
+                    float light = c.GetBrightness();
+                    //MessageBox.Show(""+light);
+                    bitmap.SetPixel(i, j, Color.FromArgb((int)((1-light)*255), c));
+                }
             }
         }
 
