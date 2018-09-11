@@ -9,6 +9,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,7 +24,8 @@ namespace Electronic_Seal
         public Form1()
         {
             InitializeComponent();
-
+            frameWidthTrackBar.Maximum = Convert.ToInt32(inputBitmapSizeX.Text.ToString());
+            frameHeightTrackBar.Maximum = Convert.ToInt32(inputBitmapSizeY.Text.ToString());
             Draws();
             //Color c = Color.Green;
             //float light = c.GetBrightness();
@@ -39,7 +41,7 @@ namespace Electronic_Seal
             seal.CreateFrame(Convert.ToInt32(inputMframeSizeX.Text.ToString()), Convert.ToInt32(inputMframeSizeY.Text.ToString()), Convert.ToInt32(frameSizeTrack.Value.ToString()));
             seal.CreateText(inputText.Text.ToString(), Convert.ToInt32(textSizeTrack.Value.ToString()));
             seal.DrawImpurity(isSlide);
-            
+
             showPictureBox.Image = bitmap;
         }
 
@@ -105,10 +107,80 @@ namespace Electronic_Seal
                         bitmap.Save(saveImageDialog.FileName, ImageFormat.Png);
                         break;
                 }
+            }
+        }
+        //frameWidthTrackBar EVENTs
+        private void frameWidthTrackBar_Scroll(object sender, EventArgs e)
+        {
+            inputMframeSizeX.Text = frameWidthTrackBar.Value.ToString();
+            Draws();
+        }
+
+        private void frameWidthTrackBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            isSlide = false;
+        }
+
+        private void frameWidthTrackBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            isSlide = true;
+            Draws();
+        }
+        //frameHeightTrackBar EVENTs
+        private void frameHeightTrackBar_Scroll(object sender, EventArgs e)
+        {
+            inputMframeSizeY.Text = frameHeightTrackBar.Value.ToString();
+            Draws();
+        }
 
 
+
+        private void frameHeightTrackBar_MouseDown(object sender, MouseEventArgs e)
+        {
+            isSlide = false;
+        }
+
+        private void frameHeightTrackBar_MouseUp(object sender, MouseEventArgs e)
+        {
+            isSlide = true;
+            Draws();
+        }
+
+
+        public bool isIntNumber(string str)
+        {
+            return Regex.IsMatch(str, @"^[+-]?\d*$");
+        }
+        private void inputBitmapSizeX_TextChanged(object sender, EventArgs e)
+        {
+            string temp = inputBitmapSizeX.Text.ToString();
+            //改变frame最大宽度
+            if (isIntNumber(temp))
+            {
+                frameWidthTrackBar.Maximum = Convert.ToInt32(temp);
+            }
+        }
+        private void inputBitmapSizeY_TextChanged(object sender, EventArgs e)
+        {
+            string temp = inputBitmapSizeY.Text.ToString();
+            //改变frame最大高度       
+            if (isIntNumber(temp))
+            {
+                frameHeightTrackBar.Maximum = Convert.ToInt32(temp);
 
             }
         }
+
+        private void inputMframeSizeX_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputMframeSizeY_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
