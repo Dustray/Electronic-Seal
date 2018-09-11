@@ -61,10 +61,11 @@ namespace Electronic_Seal
         }
         public void DrawImpurity(bool isSlide)
         {
+            int bitmapArea = bitmapWidth * bitmapHeight;
             if (isSlide)
             {
-                someDot(bitmap, 2000, 2, Color.White);
-                someDot(bitmap, 700, 3, Color.White);
+                someDot(bitmap, 2000, bitmapArea /40000, Color.White);//400*200=80000->2000->2
+                someDot(bitmap, 700, bitmapArea/26666, Color.White);//400*200=80000->700->3
             }
         }
         private void someDot(Bitmap bit ,int count,int size,Color color)

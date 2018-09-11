@@ -154,33 +154,73 @@ namespace Electronic_Seal
         private void inputBitmapSizeX_TextChanged(object sender, EventArgs e)
         {
             string temp = inputBitmapSizeX.Text.ToString();
+            int inputX = Convert.ToInt32(temp);
+            int inputY = Convert.ToInt32(inputBitmapSizeY.Text.ToString());
             //改变frame最大宽度
-            if (isIntNumber(temp))
+            if (temp != "" && isIntNumber(temp))
             {
-                frameWidthTrackBar.Maximum = Convert.ToInt32(temp);
+                frameWidthTrackBar.Maximum = inputX;
+                //设置边框最大粗细
+                frameSizeTrack.Maximum = (inputY + inputX )/ 20;
+                //设置文字最大尺寸
+                textSizeTrack.Maximum = inputX < inputY ? inputX : inputY;
             }
         }
         private void inputBitmapSizeY_TextChanged(object sender, EventArgs e)
         {
             string temp = inputBitmapSizeY.Text.ToString();
+            int inputX = Convert.ToInt32(temp);
+            int inputY = Convert.ToInt32(inputBitmapSizeX.Text.ToString());
             //改变frame最大高度       
-            if (isIntNumber(temp))
+            if (temp!="" && isIntNumber(temp))
             {
-                frameHeightTrackBar.Maximum = Convert.ToInt32(temp);
-
+                frameHeightTrackBar.Maximum = inputY;
+                //设置边框最大粗细
+                frameSizeTrack.Maximum = (inputY + inputX) / 20;
+                //设置文字最大尺寸
+                textSizeTrack.Maximum = inputX < inputY ? inputX : inputY;
             }
         }
 
         private void inputMframeSizeX_TextChanged(object sender, EventArgs e)
         {
-
+         
         }
 
         private void inputMframeSizeY_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
 
 
+
+        private void inputMframeSizeX_Leave(object sender, EventArgs e)
+        {
+            string temp = inputMframeSizeX.Text.ToString();
+            //改变frame宽度     
+            if (temp != "" && isIntNumber(temp))
+            {
+                if (Convert.ToInt32(temp) <= frameWidthTrackBar.Maximum && Convert.ToInt32(temp) >= frameWidthTrackBar.Minimum)
+                {
+                    //MessageBox.Show(temp+"."+ frameWidthTrackBar.Maximum);
+                    frameWidthTrackBar.Value = Convert.ToInt32(temp);
+                }
+                else
+                    inputMframeSizeX.Text = frameWidthTrackBar.Value.ToString();
+            }
+        }
+
+        private void inputMframeSizeY_Leave(object sender, EventArgs e)
+        {
+            string temp = inputMframeSizeY.Text.ToString();
+            //改变frame高度     
+            if (temp != "" && isIntNumber(temp))
+            {
+                if (Convert.ToInt32(temp) <= frameHeightTrackBar.Maximum && Convert.ToInt32(temp) >= frameHeightTrackBar.Minimum)
+                    frameHeightTrackBar.Value = Convert.ToInt32(temp);
+                else
+                    inputMframeSizeY.Text = frameHeightTrackBar.Value.ToString();
+            }
+        }
     }
 }

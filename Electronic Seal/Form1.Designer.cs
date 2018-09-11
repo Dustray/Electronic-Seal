@@ -33,35 +33,35 @@
             this.inputBitmapSizeX = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.frameHeightTrackBar = new System.Windows.Forms.TrackBar();
+            this.frameWidthTrackBar = new System.Windows.Forms.TrackBar();
             this.saveBtn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.inputText = new System.Windows.Forms.TextBox();
+            this.inputMframeSizeY = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.inputBitmapSizeY = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.inputMframeSizeX = new System.Windows.Forms.TextBox();
             this.textSizeText = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textSizeTrack = new System.Windows.Forms.TrackBar();
             this.frameSizeText = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.frameSizeTrack = new System.Windows.Forms.TrackBar();
-            this.inputMframeSizeY = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.inputBitmapSizeY = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.inputMframeSizeX = new System.Windows.Forms.TextBox();
             this.saveImageDialog = new System.Windows.Forms.SaveFileDialog();
-            this.frameWidthTrackBar = new System.Windows.Forms.TrackBar();
-            this.frameHeightTrackBar = new System.Windows.Forms.TrackBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.showPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frameHeightTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frameWidthTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textSizeTrack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frameSizeTrack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frameWidthTrackBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frameHeightTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // showPictureBox
@@ -147,6 +147,72 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "配置";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(189, 54);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 15);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "高";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(108, 54);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(22, 15);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "宽";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(105, 152);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(22, 15);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "高";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(105, 114);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(22, 15);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "宽";
+            // 
+            // frameHeightTrackBar
+            // 
+            this.frameHeightTrackBar.Location = new System.Drawing.Point(10, 132);
+            this.frameHeightTrackBar.Maximum = 200;
+            this.frameHeightTrackBar.Minimum = 5;
+            this.frameHeightTrackBar.Name = "frameHeightTrackBar";
+            this.frameHeightTrackBar.Size = new System.Drawing.Size(202, 56);
+            this.frameHeightTrackBar.TabIndex = 22;
+            this.frameHeightTrackBar.Value = 150;
+            this.frameHeightTrackBar.Scroll += new System.EventHandler(this.frameHeightTrackBar_Scroll);
+            this.frameHeightTrackBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frameHeightTrackBar_MouseDown);
+            this.frameHeightTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frameHeightTrackBar_MouseUp);
+            // 
+            // frameWidthTrackBar
+            // 
+            this.frameWidthTrackBar.Location = new System.Drawing.Point(11, 93);
+            this.frameWidthTrackBar.Maximum = 400;
+            this.frameWidthTrackBar.Minimum = 5;
+            this.frameWidthTrackBar.Name = "frameWidthTrackBar";
+            this.frameWidthTrackBar.Size = new System.Drawing.Size(202, 56);
+            this.frameWidthTrackBar.TabIndex = 21;
+            this.frameWidthTrackBar.Value = 350;
+            this.frameWidthTrackBar.Scroll += new System.EventHandler(this.frameWidthTrackBar_Scroll);
+            this.frameWidthTrackBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frameWidthTrackBar_MouseDown);
+            this.frameWidthTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frameWidthTrackBar_MouseUp);
+            // 
             // saveBtn
             // 
             this.saveBtn.CausesValidation = false;
@@ -176,6 +242,68 @@
             this.inputText.Size = new System.Drawing.Size(173, 25);
             this.inputText.TabIndex = 18;
             this.inputText.Text = "请输入文本";
+            // 
+            // inputMframeSizeY
+            // 
+            this.inputMframeSizeY.Location = new System.Drawing.Point(220, 132);
+            this.inputMframeSizeY.Margin = new System.Windows.Forms.Padding(4);
+            this.inputMframeSizeY.Name = "inputMframeSizeY";
+            this.inputMframeSizeY.Size = new System.Drawing.Size(49, 25);
+            this.inputMframeSizeY.TabIndex = 9;
+            this.inputMframeSizeY.Text = "150";
+            this.inputMframeSizeY.TextChanged += new System.EventHandler(this.inputMframeSizeY_TextChanged);
+            this.inputMframeSizeY.Leave += new System.EventHandler(this.inputMframeSizeY_Leave);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "外框大小：";
+            // 
+            // inputBitmapSizeY
+            // 
+            this.inputBitmapSizeY.Location = new System.Drawing.Point(176, 25);
+            this.inputBitmapSizeY.Margin = new System.Windows.Forms.Padding(4);
+            this.inputBitmapSizeY.Name = "inputBitmapSizeY";
+            this.inputBitmapSizeY.Size = new System.Drawing.Size(49, 25);
+            this.inputBitmapSizeY.TabIndex = 4;
+            this.inputBitmapSizeY.Text = "200";
+            this.inputBitmapSizeY.TextChanged += new System.EventHandler(this.inputBitmapSizeY_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(155, 29);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(15, 15);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(232, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "像素";
+            // 
+            // inputMframeSizeX
+            // 
+            this.inputMframeSizeX.Location = new System.Drawing.Point(220, 91);
+            this.inputMframeSizeX.Margin = new System.Windows.Forms.Padding(4);
+            this.inputMframeSizeX.Name = "inputMframeSizeX";
+            this.inputMframeSizeX.Size = new System.Drawing.Size(49, 25);
+            this.inputMframeSizeX.TabIndex = 5;
+            this.inputMframeSizeX.Text = "350";
+            this.inputMframeSizeX.TextChanged += new System.EventHandler(this.inputMframeSizeX_TextChanged);
+            this.inputMframeSizeX.Leave += new System.EventHandler(this.inputMframeSizeX_Leave);
             // 
             // textSizeText
             // 
@@ -247,16 +375,6 @@
             this.frameSizeTrack.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frameSizeTrack_MouseDown);
             this.frameSizeTrack.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frameSizeTrack_MouseUp);
             // 
-            // inputMframeSizeY
-            // 
-            this.inputMframeSizeY.Location = new System.Drawing.Point(220, 132);
-            this.inputMframeSizeY.Margin = new System.Windows.Forms.Padding(4);
-            this.inputMframeSizeY.Name = "inputMframeSizeY";
-            this.inputMframeSizeY.Size = new System.Drawing.Size(49, 25);
-            this.inputMframeSizeY.TabIndex = 9;
-            this.inputMframeSizeY.Text = "150";
-            this.inputMframeSizeY.TextChanged += new System.EventHandler(this.inputMframeSizeY_TextChanged);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -266,120 +384,6 @@
             this.label5.Size = new System.Drawing.Size(15, 15);
             this.label5.TabIndex = 11;
             this.label5.Text = "*";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 62);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "外框大小：";
-            // 
-            // inputBitmapSizeY
-            // 
-            this.inputBitmapSizeY.Location = new System.Drawing.Point(176, 25);
-            this.inputBitmapSizeY.Margin = new System.Windows.Forms.Padding(4);
-            this.inputBitmapSizeY.Name = "inputBitmapSizeY";
-            this.inputBitmapSizeY.Size = new System.Drawing.Size(49, 25);
-            this.inputBitmapSizeY.TabIndex = 4;
-            this.inputBitmapSizeY.Text = "200";
-            this.inputBitmapSizeY.TextChanged += new System.EventHandler(this.inputBitmapSizeY_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(155, 29);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "*";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "像素";
-            // 
-            // inputMframeSizeX
-            // 
-            this.inputMframeSizeX.Location = new System.Drawing.Point(220, 91);
-            this.inputMframeSizeX.Margin = new System.Windows.Forms.Padding(4);
-            this.inputMframeSizeX.Name = "inputMframeSizeX";
-            this.inputMframeSizeX.Size = new System.Drawing.Size(49, 25);
-            this.inputMframeSizeX.TabIndex = 5;
-            this.inputMframeSizeX.Text = "350";
-            this.inputMframeSizeX.TextChanged += new System.EventHandler(this.inputMframeSizeX_TextChanged);
-            // 
-            // frameWidthTrackBar
-            // 
-            this.frameWidthTrackBar.Location = new System.Drawing.Point(11, 93);
-            this.frameWidthTrackBar.Minimum = 5;
-            this.frameWidthTrackBar.Name = "frameWidthTrackBar";
-            this.frameWidthTrackBar.Size = new System.Drawing.Size(202, 56);
-            this.frameWidthTrackBar.TabIndex = 21;
-            this.frameWidthTrackBar.Value = 5;
-            this.frameWidthTrackBar.Scroll += new System.EventHandler(this.frameWidthTrackBar_Scroll);
-            this.frameWidthTrackBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frameWidthTrackBar_MouseDown);
-            this.frameWidthTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frameWidthTrackBar_MouseUp);
-            // 
-            // frameHeightTrackBar
-            // 
-            this.frameHeightTrackBar.Location = new System.Drawing.Point(10, 132);
-            this.frameHeightTrackBar.Minimum = 5;
-            this.frameHeightTrackBar.Name = "frameHeightTrackBar";
-            this.frameHeightTrackBar.Size = new System.Drawing.Size(202, 56);
-            this.frameHeightTrackBar.TabIndex = 22;
-            this.frameHeightTrackBar.Value = 5;
-            this.frameHeightTrackBar.Scroll += new System.EventHandler(this.frameHeightTrackBar_Scroll);
-            this.frameHeightTrackBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frameHeightTrackBar_MouseDown);
-            this.frameHeightTrackBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.frameHeightTrackBar_MouseUp);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(105, 114);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(22, 15);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "宽";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(105, 152);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 15);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "高";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(108, 54);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 15);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "宽";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(189, 54);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(22, 15);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "高";
             // 
             // Form1
             // 
@@ -395,10 +399,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.showPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.frameHeightTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frameWidthTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textSizeTrack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frameSizeTrack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frameWidthTrackBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frameHeightTrackBar)).EndInit();
             this.ResumeLayout(false);
 
         }
